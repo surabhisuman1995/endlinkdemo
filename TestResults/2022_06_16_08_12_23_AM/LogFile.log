@@ -1,0 +1,10 @@
+ INFO | 2022-06-16 08:12:23,076 | Util.java | 199 | Test script execution started...
+ INFO | 2022-06-16 08:12:23,081 | Util.java | 199 | Log File creation done : LogFile.log
+ INFO | 2022-06-16 08:12:23,919 | Util.java | 199 | Test case data set in sheet : ERT-41: Val. send msg to coworker_01
+ INFO | 2022-06-16 08:12:23,919 | Util.java | 199 | Flag for the data set is : YES
+ INFO | 2022-06-16 08:12:30,544 | Util.java | 199 | Entered Value in the text field surabhi@endlink.com
+ INFO | 2022-06-16 08:12:30,547 | Util.java | 199 | Report step generation success : Entered Value in the text field surabhi@endlink.com
+ INFO | 2022-06-16 08:12:31,256 | Util.java | 199 | Entered Value in the text field Endlink@2022
+ INFO | 2022-06-16 08:12:31,257 | Util.java | 199 | Report step generation success : Entered Value in the text field Endlink@2022
+ INFO | 2022-06-16 08:12:31,747 | Util.java | 199 | Clicked on element Submit Button
+ INFO | 2022-06-16 08:12:31,748 | Util.java | 199 | Report step generation success : Clicked on element Submit Button

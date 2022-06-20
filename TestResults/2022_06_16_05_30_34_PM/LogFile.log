@@ -1,0 +1,12 @@
+ INFO | 2022-06-16 17:30:34,604 | Util.java | 199 | Test script execution started...
+ INFO | 2022-06-16 17:30:34,608 | Util.java | 199 | Log File creation done : LogFile.log
+ INFO | 2022-06-16 17:30:40,355 | Util.java | 199 | Test case data set in sheet : ERT-40: Val. Login/Logout_01
+ INFO | 2022-06-16 17:30:40,356 | Util.java | 199 | Flag for the data set is : YES
+ INFO | 2022-06-16 17:30:53,982 | Util.java | 199 | Entered Value in the text field surabhi@endlink.com
+ INFO | 2022-06-16 17:30:53,985 | Util.java | 199 | Report step generation success : Entered Value in the text field surabhi@endlink.com
+ INFO | 2022-06-16 17:30:54,204 | Util.java | 199 | Entered Value in the text field Endlink@2022
+ INFO | 2022-06-16 17:30:54,204 | Util.java | 199 | Report step generation success : Entered Value in the text field Endlink@2022
+ INFO | 2022-06-16 17:30:54,392 | Util.java | 199 | Clicked on element Submit Button
+ INFO | 2022-06-16 17:30:54,392 | Util.java | 199 | Report step generation success : Clicked on element Submit Button
+ INFO | 2022-06-16 17:31:02,342 | Util.java | 199 | Logged out successfully from the application
+ INFO | 2022-06-16 17:31:02,343 | Util.java | 195 | Report step generation success : Logged out successfully from the application

@@ -1,0 +1,32 @@
+2021-06-01 19:35:41,574  INFO [main] log:190 - Test script execution started...
+2021-06-01 19:35:41,576  INFO [main] log:190 - Log File creation done : LogFile.log
+2021-06-01 19:35:47,284  INFO [main] log:190 - Test case data set in sheet : YES
+2021-06-01 19:35:47,285  INFO [main] log:190 - Flag for the data set is : shijinsureshv@gmail.com
+2021-06-01 19:35:47,303 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2021-06-01 19:35:47,304 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+2021-06-01 19:35:47,305 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2021-06-01 19:35:47,306 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2021-06-01 19:35:47,306 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/Users/surabhi/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2021-06-01 19:35:47,553  INFO [main] log:190 - Test case data set in sheet : YES
+2021-06-01 19:35:47,553  INFO [main] log:190 - Flag for the data set is : shijinsureshv@gmail.com
+2021-06-01 19:35:47,554 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2021-06-01 19:35:47,554 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+2021-06-01 19:35:47,554 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2021-06-01 19:35:47,554 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2021-06-01 19:35:47,554 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/Users/surabhi/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2021-06-01 19:36:07,108  INFO [main] log:190 - Test script execution started...
+2021-06-01 19:36:07,110  INFO [main] log:190 - Log File creation done : LogFile.log
+2021-06-01 19:36:12,607  INFO [main] log:190 - Test case data set in sheet : YES
+2021-06-01 19:36:12,607  INFO [main] log:190 - Flag for the data set is : shijinsureshv@gmail.com
+2021-06-01 19:36:12,623 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2021-06-01 19:36:12,624 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+2021-06-01 19:36:12,625 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2021-06-01 19:36:12,625 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2021-06-01 19:36:12,626 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/Users/surabhi/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2021-06-01 19:36:12,866  INFO [main] log:190 - Test case data set in sheet : YES
+2021-06-01 19:36:12,866  INFO [main] log:190 - Flag for the data set is : shijinsureshv@gmail.com
+2021-06-01 19:36:12,867 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2021-06-01 19:36:12,867 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+2021-06-01 19:36:12,867 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2021-06-01 19:36:12,867 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2021-06-01 19:36:12,867 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/Users/surabhi/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"

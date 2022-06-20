@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="28516" started-at="2022-06-16T12:00:34Z" finished-at="2022-06-16T12:01:03Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="28516" started-at="2022-06-16T12:00:34Z" finished-at="2022-06-16T12:01:03Z">
+      <class name="testsuite.RegressionTestCases">
+        <test-method status="PASS" signature="before()[pri:0, instance:testsuite.RegressionTestCases@6f3b5d16]" name="before" is-config="true" duration-ms="5187" started-at="2022-06-16T17:30:34Z" finished-at="2022-06-16T17:30:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="TC_EL_001()[pri:0, instance:testsuite.RegressionTestCases@6f3b5d16]" name="TC_EL_001" duration-ms="23319" started-at="2022-06-16T17:30:39Z" finished-at="2022-06-16T17:31:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_EL_001 -->
+      </class> <!-- testsuite.RegressionTestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
