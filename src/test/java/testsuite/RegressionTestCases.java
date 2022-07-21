@@ -1374,5 +1374,5 @@ public class RegressionTestCases {
 		}
 		Values.extent.endTest(Values.parent);
 		Values.extent.flush();
-//	}
+	}
 }
