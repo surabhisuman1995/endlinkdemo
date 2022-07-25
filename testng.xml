@@ -4,14 +4,15 @@
 		<classes>
 			<class name="testsuite.RegressionTestCases" />
 			<methods>
-				<include name="TC_EL_001" />
-				<!-- <include name="TC_EL_002" />
-				<include name="TC_EL_003" />
-				<include name="TC_EL_004" />
-				<include name="TC_EL_005" />
-				<include name="TC_EL_006" />
-				<include name="TC_EL_007" />
-				<include name="TC_EL_008" /> -->
+				<exclude name="TC_EL_010" />
+				<exclude name="TC_EL_018" />
+				<exclude name="TC_EL_022" />
+				<exclude name="TC_EL_023" />
+				<exclude name="TC_EL_032" />
+				<exclude name="TC_EL_034" />
+
+				
+			
 				
 				
 			</methods>
