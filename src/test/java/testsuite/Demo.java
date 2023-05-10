@@ -4,6 +4,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 
 import org.openqa.selenium.WebDriver;
 
@@ -20,9 +21,10 @@ import utilities.Util;
 import utilities.Values;
 
 public class Demo {
-	private WebDriver browser;
+	// private WebDriver browser;
 
 	public EndLinkApplication EndLinkApplication;
+	
 
 	@BeforeClass
 	public void before() {
@@ -31,27 +33,35 @@ public class Demo {
 		Values.extent = new ExtentReports(Values.outputDirectory + "/Results.html", true);
 
 	}
-
+	
 	@Test
-	public void TC_EL_001() throws InterruptedException {
-		Util.start("EndLink", "ERT-40: Val. Search", "Validate Searching a User");
-		try {
+	public void TC_EL_001() {
+		Util.start("EndLink", "Val. User Search", "Validate User Search");
+		
+		for (String testcase : Values.testcases) {
+			try {
+				Values.child = Values.extent.startTest(testcase);
+				Values.testCaseDataRow = Util.returnIndex(testcase);
 
-			EndLinkApplication = new EndLinkApplication();
-			LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
-			HomePage homepage = LoginPage.login();
-			Thread.sleep(2000);
-			homepage.logout1();
+				// ====================================
+				EndLinkApplication = new EndLinkApplication();
+				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
+				HomePage homepage = LoginPage.login();
+				homepage.logout1();
+				
+				
+				// ====================================
 
-		} catch (Exception e) {
-			Util.Failed("Exception caught" + e.getMessage());
-		} finally {
-			Values.parent.appendChild(Values.child);
-			Values.currentStep = 0;
-			EndLinkApplication.closeApp();
+
+			} catch (Exception e) {
+				Util.Failed("Exception caught" + e.getMessage());
+			} finally {
+				Values.parent.appendChild(Values.child);
+				Values.currentStep = 0;
+				EndLinkApplication.closeApp();
+			}
 		}
 		Values.extent.endTest(Values.parent);
 		Values.extent.flush();
-
 	}
 }

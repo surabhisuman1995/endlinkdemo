@@ -52,10 +52,27 @@ public class LoginPage extends Page {
 		return new HomePage(browser);
 	}
 	
-	public HomePage login() {
-		browser.findElement(By.xpath("//input[@type='email']")).sendKeys("surabhis+0989@geekyants.com");;
+	public HomePage login() throws InterruptedException {
+		browser.findElement(By.xpath("//input[@type='email']")).sendKeys("surabhis+0989@geekyants.com");
 		browser.findElement(By.xpath("//input[@type='password']")).sendKeys("Endlink@2020");
+		Util.Screenshot();
 		browser.findElement(By.xpath("//span[text()='Sign In']")).click();
+		Thread.sleep(5000);
+		browser.findElement(By.xpath("//span[text()='Demo_Company']")).click();
+		Util.Screenshot();
+		Thread.sleep(2000);
+		browser.findElement(By.xpath("//*[name()='svg'][@class='createbutton']")).click();
+		Thread.sleep(2000);
+		browser.findElement(By.xpath("//div[contains(@class,'src-components-organisms-addrecipient')]//input"))
+				.sendKeys("Doctor");
+		WebElement s1 = browser.findElement(By.xpath("//span[text()='Doctor Demo Last1 Name']"));
+		if (s1.isDisplayed()) {
+			Util.Screenshot();
+			Util.Passed("The user is displayed within time limit");
+
+		} else {
+			Util.Failed("The user is displayed beyond time");
+		}
 		return new HomePage(browser);
 	}
 }
