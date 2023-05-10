@@ -1,0 +1,6 @@
+ INFO | 2023-05-10 19:30:04,677 | Util.java | 199 | Test script execution started...
+ INFO | 2023-05-10 19:30:04,682 | Util.java | 199 | Log File creation done : LogFile.log
+ INFO | 2023-05-10 19:30:25,664 | Util.java | 199 | Test case data set in sheet : Val. User Search_01
+ INFO | 2023-05-10 19:30:25,665 | Util.java | 199 | Flag for the data set is : YES
+ INFO | 2023-05-10 19:30:40,581 | Util.java | 199 | The user is displayed within time limit
+ INFO | 2023-05-10 19:30:40,583 | Util.java | 195 | Report step generation success : The user is displayed within time limit
