@@ -250,6 +250,10 @@ public class HomePage extends Page {
 	
 	@FindBy(xpath="//body/div[@id='root']/div[1]")
 	private WebElement switchMode;
+	
+	@FindBy(xpath = "//span[contains(text(),'Click here!')]")
+	private WebElement catLogout;
+	
 
 	public HomePage(WebDriver browser) {
 		super(browser);
@@ -294,7 +298,7 @@ public class HomePage extends Page {
 
 	public void SendMsgMultipleCoworkers() throws InterruptedException {
 
-		sleep(3000);
+		sleep(5000);
 		clickOn(btnCreate, "Create message button");
 		clickOn(txtToRecipient);
 		enterText(txtToRecipient, Util.get("RecipientName1"));
@@ -346,10 +350,10 @@ public class HomePage extends Page {
 		sleep(3000);
 		clickOn(ToDoFilter, "ToDo filter");
 		clickOn(btnCreate, "Create message button");
-		clickOn(assignee1, "assignee");
-		enterText(assignee2, Util.get("AssigneeName"));
-		Thread.sleep(2000);
-		clickOn(recipient, "recipient");
+//		clickOn(assignee1, "assignee");
+//		enterText(assignee2, Util.get("AssigneeName"));
+//		Thread.sleep(2000);
+//		clickOn(recipient, "recipient");
 		clickOn(Duedate, "Due Date");
 		clickOn(chooseDate, "Choose date from date picker");
 		clickOn(OK, "Ok button of date picker");
@@ -480,15 +484,25 @@ public class HomePage extends Page {
 		Util.Screenshot();
 	}
 
-	public void selectOrg() {
+	public void selectOrg() throws InterruptedException {
+		
+		Thread.sleep(5000);
 		String OrgName = Util.get("OrgName").trim();
 		waitForElement(
 				By.xpath("//span[contains(text(),'" + OrgName + "')]/parent::div/parent::div/parent::div/parent::div"));
-		if (isElementPresent(By
-				.xpath("//span[contains(text(),'" + OrgName + "')]/parent::div/parent::div/parent::div/parent::div"))) {
+		
+//		waitForElement(
+//				By.xpath("//div[@class='src-components-molecules-account-___account-m__wrapper___2BZkt']"
+//						+ "//div[@class='src-components-molecules-account-___account-m__padding-2___Eyd7i']"
+//						+ "/span[contains(text(),'" + OrgName + "')]"));
+		
+		
+		
+		if (isElementPresent(
+				By.xpath("//span[contains(text(),'" + OrgName + "')]/parent::div/parent::div/parent::div/parent::div"))) {
 
-			clickOn(By.xpath(
-					"//span[contains(text(),'" + OrgName + "')]/parent::div/parent::div/parent::div/parent::div"),
+			clickOn(
+					By.xpath("//span[contains(text(),'" + OrgName + "')]/parent::div/parent::div/parent::div/parent::div"),
 					"Entered the Organisation:" + OrgName);
 			Util.Screenshot();
 
@@ -502,7 +516,9 @@ public class HomePage extends Page {
 	public void validateMsg() throws InterruptedException {
 
 		String msg = messageSent;
+		Thread.sleep(3000);
 		clickOn(By.xpath("//span[contains(text(),'" + msg + "')]"), "is the last sent message");
+		//clickOn(By.xpath("//span[contains(text(),'Hey')]"), "is the last sent message");
 		Thread.sleep(10000);
 		Util.Screenshot();
 
@@ -653,6 +669,8 @@ public class HomePage extends Page {
 
 	}
 
+	
+	
 	public void clickOnGhostIcon() throws InterruptedException {
 		String msg = messageSent;
 		Thread.sleep(5000);
@@ -1355,6 +1373,18 @@ public class HomePage extends Page {
 
 	public LoginPage logout() {
 		clickOn(btnLogOut);
+		if (isElementPresent(By.xpath("//input[@type='email']"))) {
+			Util.Passed("Logged out successfully from the application");
+			Util.Screenshot();
+		} else {
+			Util.Failed("Unable to logout from the application");
+		}
+		return new LoginPage(browser);
+	}
+	
+	public LoginPage logout1() {
+		clickOn(btnLogOut);
+		clickOn(catLogout);
 		if (isElementPresent(By.xpath("//input[@type='email']"))) {
 			Util.Passed("Logged out successfully from the application");
 			Util.Screenshot();

@@ -38,10 +38,9 @@ public class RegressionTestCases {
 		Values.extent = new ExtentReports(Values.outputDirectory + "/Results.html", true);
 
 	}
-
+	
 	@Test
 	public void TC_EL_001() {
-		System.out.println("___________");
 		Util.start("EndLink", "ERT-40: Val. Login/Logout", "Validate Login & Logout Functionality");
 		
 		for (String testcase : Values.testcases) {
@@ -53,8 +52,7 @@ public class RegressionTestCases {
 				EndLinkApplication = new EndLinkApplication();
 				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
 				HomePage homepage = LoginPage.loginToApplication();
-				Thread.sleep(3000);
-				homepage.logout();
+				homepage.logout1();
 				// ====================================
 
 			} catch (Exception e) {
@@ -82,7 +80,7 @@ public class RegressionTestCases {
 				EndLinkApplication = new EndLinkApplication();
 				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
 				HomePage homepage = LoginPage.loginToApplication();
-
+				Thread.sleep(5000);
 				homepage.selectOrg();
 				homepage.SendMessage();
 				Thread.sleep(5000);
@@ -221,9 +219,7 @@ public class RegressionTestCases {
 		Values.extent.flush();
 	}
 
-//////		
-//////		
-//////
+
 	@Test
 	public void TC_EL_006() throws ClassNotFoundException {
 
@@ -256,38 +252,38 @@ public class RegressionTestCases {
 		Values.extent.flush();
 	}
 
-	@Test
-	public void TC_EL_007() throws ClassNotFoundException {
-
-		Util.start("EndLink", "ERT-46: Val. send img to coworker", "Validate send image to one coworker");
-		for (String testcase : Values.testcases) {
-			try {
-				Values.child = Values.extent.startTest(testcase);
-				Values.testCaseDataRow = Util.returnIndex(testcase);
-
-				// ====================================
-				EndLinkApplication = new EndLinkApplication();
-				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
-				HomePage homepage = LoginPage.loginToApplication();
-
-				homepage.selectOrg();
-				homepage.sendImage();
-				// some validation
-				homepage.logout();
-
-				// ====================================
-
-			} catch (Exception e) {
-				Util.Failed("Exception caught" + e.getMessage());
-			} finally {
-				Values.parent.appendChild(Values.child);
-				Values.currentStep = 0;
-				EndLinkApplication.closeApp();
-			}
-		}
-		Values.extent.endTest(Values.parent);
-		Values.extent.flush();
-	}
+//	@Test
+//	public void TC_EL_007() throws ClassNotFoundException {
+//
+//		Util.start("EndLink", "ERT-46: Val. send img to coworker", "Validate send image to one coworker");
+//		for (String testcase : Values.testcases) {
+//			try {
+//				Values.child = Values.extent.startTest(testcase);
+//				Values.testCaseDataRow = Util.returnIndex(testcase);
+//
+//				// ====================================
+//				EndLinkApplication = new EndLinkApplication();
+//				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
+//				HomePage homepage = LoginPage.loginToApplication();
+//
+//				homepage.selectOrg();
+//				homepage.sendImage();
+//				// some validation
+//				homepage.logout();
+//
+//				// ====================================
+//
+//			} catch (Exception e) {
+//				Util.Failed("Exception caught" + e.getMessage());
+//			} finally {
+//				Values.parent.appendChild(Values.child);
+//				Values.currentStep = 0;
+//				EndLinkApplication.closeApp();
+//			}
+//		}
+//		Values.extent.endTest(Values.parent);
+//		Values.extent.flush();
+//	}
 
 	@Test
 	public void TC_EL_008() throws ClassNotFoundException {
@@ -449,37 +445,37 @@ public class RegressionTestCases {
 		Values.extent.flush();
 	}
 
-	@Test
-	public void TC_EL_013() throws ClassNotFoundException {
-
-		Util.start("EndLink", "ERT-15: Val. stack msgs. vertically if both rings status = inactive",
-				"Validate that if both the rings are inactive,stack the messages vertically");
-
-		for (String testcase : Values.testcases) {
-			try {
-				Values.child = Values.extent.startTest(testcase);
-				Values.testCaseDataRow = Util.returnIndex(testcase);
-
-				// ====================================
-				EndLinkApplication = new EndLinkApplication();
-				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
-				HomePage homepage = LoginPage.loginToApplication();
-
-				homepage.selectOrg();
-				homepage.messageStackInactiveRing();
-				homepage.logout();
-
-			} catch (Exception e) {
-				Util.Failed("Exception caught" + e.getMessage());
-			} finally {
-				Values.parent.appendChild(Values.child);
-				Values.currentStep = 0;
-				EndLinkApplication.closeApp();
-			}
-		}
-		Values.extent.endTest(Values.parent);
-		Values.extent.flush();
-	}
+//	@Test
+//	public void TC_EL_013() throws ClassNotFoundException {
+//
+//		Util.start("EndLink", "ERT-15: Val. stack msgs. vertically if both rings status = inactive",
+//				"Validate that if both the rings are inactive,stack the messages vertically");
+//
+//		for (String testcase : Values.testcases) {
+//			try {
+//				Values.child = Values.extent.startTest(testcase);
+//				Values.testCaseDataRow = Util.returnIndex(testcase);
+//
+//				// ====================================
+//				EndLinkApplication = new EndLinkApplication();
+//				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
+//				HomePage homepage = LoginPage.loginToApplication();
+//
+//				homepage.selectOrg();
+//				homepage.messageStackInactiveRing();
+//				homepage.logout();
+//
+//			} catch (Exception e) {
+//				Util.Failed("Exception caught" + e.getMessage());
+//			} finally {
+//				Values.parent.appendChild(Values.child);
+//				Values.currentStep = 0;
+//				EndLinkApplication.closeApp();
+//			}
+//		}
+//		Values.extent.endTest(Values.parent);
+//		Values.extent.flush();
+//	}
 
 	@Test
 	public void TC_EL_014() throws ClassNotFoundException {
@@ -640,37 +636,37 @@ public class RegressionTestCases {
 		Values.extent.flush();
 	}
 
-	// @Test
-	// public void TC_EL_018() throws ClassNotFoundException {
-
-	// 	Util.start("EndLink", "ERT-49: Val. changing theme", "Validate changing theme");
-
-	// 	for (String testcase : Values.testcases) {
-	// 		try {
-	// 			Values.child = Values.extent.startTest(testcase);
-	// 			Values.testCaseDataRow = Util.returnIndex(testcase);
-
-	// 			// ====================================
-	// 			EndLinkApplication = new EndLinkApplication();
-	// 			LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
-	// 			HomePage homepage = LoginPage.loginToApplication();
-
-	// 			homepage.selectOrg();
-	// 			homepage.themeChange();
-	// 			homepage.logout();
-
-	// 		} catch (Exception e) {
-	// 			Util.Failed("Exception caught" + e.getMessage());
-	// 		} finally {
-	// 			Values.parent.appendChild(Values.child);
-	// 			Values.currentStep = 0;
-	// 			EndLinkApplication.closeApp();
-	// 		}
-	// 	}
-	// 	Values.extent.endTest(Values.parent);
-	// 	Values.extent.flush();
-	// }
-
+////	@Test
+////	public void TC_EL_018() throws ClassNotFoundException {
+////
+////		Util.start("EndLink", "ERT-49: Val. changing theme", "Validate changing theme");
+////
+////		for (String testcase : Values.testcases) {
+////			try {
+////				Values.child = Values.extent.startTest(testcase);
+////				Values.testCaseDataRow = Util.returnIndex(testcase);
+////
+////				// ====================================
+////				EndLinkApplication = new EndLinkApplication();
+////				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
+////				HomePage homepage = LoginPage.loginToApplication();
+////
+////				homepage.selectOrg();
+////				homepage.themeChange();
+////				homepage.logout();
+////
+////			} catch (Exception e) {
+////				Util.Failed("Exception caught" + e.getMessage());
+////			} finally {
+////				Values.parent.appendChild(Values.child);
+////				Values.currentStep = 0;
+////				EndLinkApplication.closeApp();
+////			}
+////		}
+////		Values.extent.endTest(Values.parent);
+////		Values.extent.flush();
+////	}
+//
 	@Test
 	public void TC_EL_019() throws ClassNotFoundException {
 
@@ -900,99 +896,99 @@ public class RegressionTestCases {
 		Values.extent.flush();
 	}
 
-	@Test
-	public void TC_EL_026() throws ClassNotFoundException {
-
-		Util.start("EndLink", "ERT-60: Val. update permissions settings", "Validate updating permissions in my profile");
-		for (String testcase : Values.testcases) {
-			try {
-				Values.child = Values.extent.startTest(testcase);
-				Values.testCaseDataRow = Util.returnIndex(testcase);
-
-				// ====================================
-				EndLinkApplication = new EndLinkApplication();
-				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
-				HomePage homepage = LoginPage.loginToApplication();
-
-				homepage.selectOrg();
-				Thread.sleep(3000);
-				homepage.updatePermissions();
-				Thread.sleep(5000);
-				homepage.logout();
-
-			} catch (Exception e) {
-				Util.Failed("Exception caught" + e.getMessage());
-			} finally {
-				Values.parent.appendChild(Values.child);
-				Values.currentStep = 0;
-				EndLinkApplication.closeApp();
-			}
-		}
-		Values.extent.endTest(Values.parent);
-		Values.extent.flush();
-	}
-
-	@Test
-	public void TC_EL_027() throws ClassNotFoundException {
-
-		Util.start("EndLink", "ERT-59: Val. update privacy settings", "Validate updating privacy settings in my profile");
-		for (String testcase : Values.testcases) {
-			try {
-				Values.child = Values.extent.startTest(testcase);
-				Values.testCaseDataRow = Util.returnIndex(testcase);
-
-				// ====================================
-				EndLinkApplication = new EndLinkApplication();
-				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
-				HomePage homepage = LoginPage.loginToApplication();
-
-				homepage.selectOrg();
-				homepage.updatePrivacySettings();
-				Thread.sleep(5000);
-				homepage.logout();
-
-			} catch (Exception e) {
-				Util.Failed("Exception caught" + e.getMessage());
-			} finally {
-				Values.parent.appendChild(Values.child);
-				Values.currentStep = 0;
-				EndLinkApplication.closeApp();
-			}
-		}
-		Values.extent.endTest(Values.parent);
-		Values.extent.flush();
-	}
-
-	@Test
-	public void TC_EL_028() throws ClassNotFoundException {
-
-		Util.start("EndLink", "ERT-58: Val. update personal info settings", "Validate updating personal info in my profile");
-		for (String testcase : Values.testcases) {
-			try {
-				Values.child = Values.extent.startTest(testcase);
-				Values.testCaseDataRow = Util.returnIndex(testcase);
-
-				// ====================================
-				EndLinkApplication = new EndLinkApplication();
-				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
-				HomePage homepage = LoginPage.loginToApplication();
-
-				homepage.selectOrg();
-				homepage.updatePersonalinfo();
-				Thread.sleep(4000);
-				homepage.logout();
-
-			} catch (Exception e) {
-				Util.Failed("Exception caught" + e.getMessage());
-			} finally {
-				Values.parent.appendChild(Values.child);
-				Values.currentStep = 0;
-				EndLinkApplication.closeApp();
-			}
-		}
-		Values.extent.endTest(Values.parent);
-		Values.extent.flush();
-	}
+//	@Test
+//	public void TC_EL_026() throws ClassNotFoundException {
+//
+//		Util.start("EndLink", "ERT-60: Val. update permissions settings", "Validate updating permissions in my profile");
+//		for (String testcase : Values.testcases) {
+//			try {
+//				Values.child = Values.extent.startTest(testcase);
+//				Values.testCaseDataRow = Util.returnIndex(testcase);
+//
+//				// ====================================
+//				EndLinkApplication = new EndLinkApplication();
+//				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
+//				HomePage homepage = LoginPage.loginToApplication();
+//
+//				homepage.selectOrg();
+//				Thread.sleep(3000);
+//				homepage.updatePermissions();
+//				Thread.sleep(5000);
+//				homepage.logout();
+//
+//			} catch (Exception e) {
+//				Util.Failed("Exception caught" + e.getMessage());
+//			} finally {
+//				Values.parent.appendChild(Values.child);
+//				Values.currentStep = 0;
+//				EndLinkApplication.closeApp();
+//			}
+//		}
+//		Values.extent.endTest(Values.parent);
+//		Values.extent.flush();
+//	}
+//
+//	@Test
+//	public void TC_EL_027() throws ClassNotFoundException {
+//
+//		Util.start("EndLink", "ERT-59: Val. update privacy settings", "Validate updating privacy settings in my profile");
+//		for (String testcase : Values.testcases) {
+//			try {
+//				Values.child = Values.extent.startTest(testcase);
+//				Values.testCaseDataRow = Util.returnIndex(testcase);
+//
+//				// ====================================
+//				EndLinkApplication = new EndLinkApplication();
+//				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
+//				HomePage homepage = LoginPage.loginToApplication();
+//
+//				homepage.selectOrg();
+//				homepage.updatePrivacySettings();
+//				Thread.sleep(5000);
+//				homepage.logout();
+//
+//			} catch (Exception e) {
+//				Util.Failed("Exception caught" + e.getMessage());
+//			} finally {
+//				Values.parent.appendChild(Values.child);
+//				Values.currentStep = 0;
+//				EndLinkApplication.closeApp();
+//			}
+//		}
+//		Values.extent.endTest(Values.parent);
+//		Values.extent.flush();
+//	}
+//
+//	@Test
+//	public void TC_EL_028() throws ClassNotFoundException {
+//
+//		Util.start("EndLink", "ERT-58: Val. update personal info settings", "Validate updating personal info in my profile");
+//		for (String testcase : Values.testcases) {
+//			try {
+//				Values.child = Values.extent.startTest(testcase);
+//				Values.testCaseDataRow = Util.returnIndex(testcase);
+//
+//				// ====================================
+//				EndLinkApplication = new EndLinkApplication();
+//				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
+//				HomePage homepage = LoginPage.loginToApplication();
+//
+//				homepage.selectOrg();
+//				homepage.updatePersonalinfo();
+//				Thread.sleep(4000);
+//				homepage.logout();
+//
+//			} catch (Exception e) {
+//				Util.Failed("Exception caught" + e.getMessage());
+//			} finally {
+//				Values.parent.appendChild(Values.child);
+//				Values.currentStep = 0;
+//				EndLinkApplication.closeApp();
+//			}
+//		}
+//		Values.extent.endTest(Values.parent);
+//		Values.extent.flush();
+//	}
 
 	@Test
 	public void TC_EL_029() throws ClassNotFoundException {
@@ -1184,195 +1180,195 @@ public class RegressionTestCases {
 //	}
 //	
 
-	@Test
-	public void TC_EL_035() throws ClassNotFoundException {
+//	@Test
+//	public void TC_EL_035() throws ClassNotFoundException {
+//
+//		Util.start("EndLink", "ERT-24: Val. customer to be added as recipient",
+//				"Validate adding customers as recipient");
+//		for (String testcase : Values.testcases) {
+//			try {
+//				Values.child = Values.extent.startTest(testcase);
+//				Values.testCaseDataRow = Util.returnIndex(testcase);
+//
+//				// ====================================
+//				EndLinkApplication = new EndLinkApplication();
+//				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
+//				HomePage homepage = LoginPage.loginToApplication();
+//
+//				homepage.selectOrg();
+//				homepage.customerAsRecipient();
+//				Thread.sleep(5000);
+//				homepage.logout();
+//
+//			} catch (Exception e) {
+//				Util.Failed("Exception caught" + e.getMessage());
+//			} finally {
+//				Values.parent.appendChild(Values.child);
+//				Values.currentStep = 0;
+//				EndLinkApplication.closeApp();
+//			}
+//		}
+//		Values.extent.endTest(Values.parent);
+//		Values.extent.flush();
+//	}
+//
+//	@Test
+//	public void TC_EL_036() throws ClassNotFoundException {
+//
+//		Util.start("EndLink", "ERT-26: Val. customer can be added/deleted as associate",
+//				"Validate adding customers as associate customer");
+//		for (String testcase : Values.testcases) {
+//			try {
+//				Values.child = Values.extent.startTest(testcase);
+//				Values.testCaseDataRow = Util.returnIndex(testcase);
+//
+//				// ====================================
+//				EndLinkApplication = new EndLinkApplication();
+//				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
+//				HomePage homepage = LoginPage.loginToApplication();
+//
+//				homepage.selectOrg();
+//				homepage.customerAsAssociate();
+//				Thread.sleep(5000);
+//				homepage.logout();
+//
+//			} catch (Exception e) {
+//				Util.Failed("Exception caught" + e.getMessage());
+//			} finally {
+//				Values.parent.appendChild(Values.child);
+//				Values.currentStep = 0;
+//				EndLinkApplication.closeApp();
+//			}
+//		}
+//		Values.extent.endTest(Values.parent);
+//		Values.extent.flush();
+//	}
+//
+//	@Test
+//	public void TC_EL_037() throws ClassNotFoundException {
+//
+//		Util.start("EndLink", "ERT-27: Val. user shld have proper settings for adding customer in To bar",
+//				"Validate if customer is added in To bar then user has permissions for it");
+//		for (String testcase : Values.testcases) {
+//			try {
+//				Values.child = Values.extent.startTest(testcase);
+//				Values.testCaseDataRow = Util.returnIndex(testcase);
+//
+//				// ====================================
+//				EndLinkApplication = new EndLinkApplication();
+//				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
+//				HomePage homepage = LoginPage.loginToApplication();
+//
+//				homepage.selectOrg();
+//				homepage.customerPermissions();
+//				Thread.sleep(5000);
+//				homepage.logout();
+//
+//			} catch (Exception e) {
+//				Util.Failed("Exception caught" + e.getMessage());
+//			} finally {
+//				Values.parent.appendChild(Values.child);
+//				Values.currentStep = 0;
+//				EndLinkApplication.closeApp();
+//			}
+//		}
+//		Values.extent.endTest(Values.parent);
+//		Values.extent.flush();
+//	}
+//
+//	@Test
+//	public void TC_EL_038() throws ClassNotFoundException {
+//
+//		Util.start("EndLink", "ERT-29: Val. if a customer is added no other customer shld be added",
+//				"Validate user can't add more than one customer as recipient");
+//		for (String testcase : Values.testcases) {
+//			try {
+//				Values.child = Values.extent.startTest(testcase);
+//				Values.testCaseDataRow = Util.returnIndex(testcase);
+//
+//				// ====================================
+//				EndLinkApplication = new EndLinkApplication();
+//				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
+//				HomePage homepage = LoginPage.loginToApplication();
+//
+//				homepage.selectOrg();
+//				homepage.singleCustomerToBar();
+//				Thread.sleep(5000);
+//				homepage.logout();
+//
+//			} catch (Exception e) {
+//				Util.Failed("Exception caught" + e.getMessage());
+//			} finally {
+//				Values.parent.appendChild(Values.child);
+//				Values.currentStep = 0;
+//				EndLinkApplication.closeApp();
+//			}
+//		}
+//		Values.extent.endTest(Values.parent);
+//		Values.extent.flush();
+//	}
+//
+//	@Test
+//	public void TC_EL_039() throws ClassNotFoundException {
+//
+//		Util.start("EndLink", "ERT-31: Val. if a recipient other than customer is added no customers shld be added",
+//				"Validate if user has added recipient other than customer,he should not be able to select customers.");
+//		for (String testcase : Values.testcases) {
+//			try {
+//				Values.child = Values.extent.startTest(testcase);
+//				Values.testCaseDataRow = Util.returnIndex(testcase);
+//
+//				// ====================================
+//				EndLinkApplication = new EndLinkApplication();
+//				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
+//				HomePage homepage = LoginPage.loginToApplication();
+//
+//				homepage.selectOrg();
+//				homepage.validateRecipienttype();
+//				Thread.sleep(5000);
+//				homepage.logout();
+//
+//			} catch (Exception e) {
+//				Util.Failed("Exception caught" + e.getMessage());
+//			} finally {
+//				Values.parent.appendChild(Values.child);
+//				Values.currentStep = 0;
+//				EndLinkApplication.closeApp();
+//			}
+//		}
+//		Values.extent.endTest(Values.parent);
+//		Values.extent.flush();
+//	}
 
-		Util.start("EndLink", "ERT-24: Val. customer to be added as recipient",
-				"Validate adding customers as recipient");
-		for (String testcase : Values.testcases) {
-			try {
-				Values.child = Values.extent.startTest(testcase);
-				Values.testCaseDataRow = Util.returnIndex(testcase);
-
-				// ====================================
-				EndLinkApplication = new EndLinkApplication();
-				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
-				HomePage homepage = LoginPage.loginToApplication();
-
-				homepage.selectOrg();
-				homepage.customerAsRecipient();
-				Thread.sleep(5000);
-				homepage.logout();
-
-			} catch (Exception e) {
-				Util.Failed("Exception caught" + e.getMessage());
-			} finally {
-				Values.parent.appendChild(Values.child);
-				Values.currentStep = 0;
-				EndLinkApplication.closeApp();
-			}
-		}
-		Values.extent.endTest(Values.parent);
-		Values.extent.flush();
-	}
-
-	@Test
-	public void TC_EL_036() throws ClassNotFoundException {
-
-		Util.start("EndLink", "ERT-26: Val. customer can be added/deleted as associate",
-				"Validate adding customers as associate customer");
-		for (String testcase : Values.testcases) {
-			try {
-				Values.child = Values.extent.startTest(testcase);
-				Values.testCaseDataRow = Util.returnIndex(testcase);
-
-				// ====================================
-				EndLinkApplication = new EndLinkApplication();
-				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
-				HomePage homepage = LoginPage.loginToApplication();
-
-				homepage.selectOrg();
-				homepage.customerAsAssociate();
-				Thread.sleep(5000);
-				homepage.logout();
-
-			} catch (Exception e) {
-				Util.Failed("Exception caught" + e.getMessage());
-			} finally {
-				Values.parent.appendChild(Values.child);
-				Values.currentStep = 0;
-				EndLinkApplication.closeApp();
-			}
-		}
-		Values.extent.endTest(Values.parent);
-		Values.extent.flush();
-	}
-
-	@Test
-	public void TC_EL_037() throws ClassNotFoundException {
-
-		Util.start("EndLink", "ERT-27: Val. user shld have proper settings for adding customer in To bar",
-				"Validate if customer is added in To bar then user has permissions for it");
-		for (String testcase : Values.testcases) {
-			try {
-				Values.child = Values.extent.startTest(testcase);
-				Values.testCaseDataRow = Util.returnIndex(testcase);
-
-				// ====================================
-				EndLinkApplication = new EndLinkApplication();
-				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
-				HomePage homepage = LoginPage.loginToApplication();
-
-				homepage.selectOrg();
-				homepage.customerPermissions();
-				Thread.sleep(5000);
-				homepage.logout();
-
-			} catch (Exception e) {
-				Util.Failed("Exception caught" + e.getMessage());
-			} finally {
-				Values.parent.appendChild(Values.child);
-				Values.currentStep = 0;
-				EndLinkApplication.closeApp();
-			}
-		}
-		Values.extent.endTest(Values.parent);
-		Values.extent.flush();
-	}
-
-	@Test
-	public void TC_EL_038() throws ClassNotFoundException {
-
-		Util.start("EndLink", "ERT-29: Val. if a customer is added no other customer shld be added",
-				"Validate user can't add more than one customer as recipient");
-		for (String testcase : Values.testcases) {
-			try {
-				Values.child = Values.extent.startTest(testcase);
-				Values.testCaseDataRow = Util.returnIndex(testcase);
-
-				// ====================================
-				EndLinkApplication = new EndLinkApplication();
-				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
-				HomePage homepage = LoginPage.loginToApplication();
-
-				homepage.selectOrg();
-				homepage.singleCustomerToBar();
-				Thread.sleep(5000);
-				homepage.logout();
-
-			} catch (Exception e) {
-				Util.Failed("Exception caught" + e.getMessage());
-			} finally {
-				Values.parent.appendChild(Values.child);
-				Values.currentStep = 0;
-				EndLinkApplication.closeApp();
-			}
-		}
-		Values.extent.endTest(Values.parent);
-		Values.extent.flush();
-	}
-
-	@Test
-	public void TC_EL_039() throws ClassNotFoundException {
-
-		Util.start("EndLink", "ERT-31: Val. if a recipient other than customer is added no customers shld be added",
-				"Validate if user has added recipient other than customer,he should not be able to select customers.");
-		for (String testcase : Values.testcases) {
-			try {
-				Values.child = Values.extent.startTest(testcase);
-				Values.testCaseDataRow = Util.returnIndex(testcase);
-
-				// ====================================
-				EndLinkApplication = new EndLinkApplication();
-				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
-				HomePage homepage = LoginPage.loginToApplication();
-
-				homepage.selectOrg();
-				homepage.validateRecipienttype();
-				Thread.sleep(5000);
-				homepage.logout();
-
-			} catch (Exception e) {
-				Util.Failed("Exception caught" + e.getMessage());
-			} finally {
-				Values.parent.appendChild(Values.child);
-				Values.currentStep = 0;
-				EndLinkApplication.closeApp();
-			}
-		}
-		Values.extent.endTest(Values.parent);
-		Values.extent.flush();
-	}
-
-	@Test
-	public void TC_EL_040() throws ClassNotFoundException {
-
-		Util.start("EndLink", "ERT-25: Val. customer icon",
-				"Validate customer icon is same at both places menu panel & To bar for dark theme");
-		for (String testcase : Values.testcases) {
-			try {
-				Values.child = Values.extent.startTest(testcase);
-				Values.testCaseDataRow = Util.returnIndex(testcase);
-
-				// ====================================
-				EndLinkApplication = new EndLinkApplication();
-				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
-				HomePage homepage = LoginPage.loginToApplication();
-
-				homepage.selectOrg();
-				homepage.customerIconDarkTheme();
-				Thread.sleep(5000);
-				homepage.logout();
-
-			} catch (Exception e) {
-				Util.Failed("Exception caught" + e.getMessage());
-			} finally {
-				Values.parent.appendChild(Values.child);
-				Values.currentStep = 0;
-				EndLinkApplication.closeApp();
-			}
-		}
-		Values.extent.endTest(Values.parent);
-		Values.extent.flush();
-	}
+//	@Test
+//	public void TC_EL_040() throws ClassNotFoundException {
+//
+//		Util.start("EndLink", "ERT-25: Val. customer icon",
+//				"Validate customer icon is same at both places menu panel & To bar for dark theme");
+//		for (String testcase : Values.testcases) {
+//			try {
+//				Values.child = Values.extent.startTest(testcase);
+//				Values.testCaseDataRow = Util.returnIndex(testcase);
+//
+//				// ====================================
+//				EndLinkApplication = new EndLinkApplication();
+//				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
+//				HomePage homepage = LoginPage.loginToApplication();
+//
+//				homepage.selectOrg();
+//				homepage.customerIconDarkTheme();
+//				Thread.sleep(5000);
+//				homepage.logout();
+//
+//			} catch (Exception e) {
+//				Util.Failed("Exception caught" + e.getMessage());
+//			} finally {
+//				Values.parent.appendChild(Values.child);
+//				Values.currentStep = 0;
+//				EndLinkApplication.closeApp();
+//			}
+//		}
+//		Values.extent.endTest(Values.parent);
+//		Values.extent.flush();
+//	}
 }

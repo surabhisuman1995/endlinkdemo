@@ -1,4 +1,0 @@
- INFO | 2022-06-20 17:19:50,368 | Util.java | 199 | Test script execution started...
- INFO | 2022-06-20 17:19:50,373 | Util.java | 199 | Log File creation done : LogFile.log
- INFO | 2022-06-20 17:19:56,423 | Util.java | 199 | Test case data set in sheet : ERT-40: Val. Login/Logout_01
- INFO | 2022-06-20 17:19:56,423 | Util.java | 199 | Flag for the data set is : YES
