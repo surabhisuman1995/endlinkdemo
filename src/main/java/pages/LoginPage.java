@@ -52,4 +52,10 @@ public class LoginPage extends Page {
 		return new HomePage(browser);
 	}
 	
+	public HomePage login() {
+		browser.findElement(By.xpath("//input[@type='email']")).sendKeys("surabhis+0989@geekyants.com");;
+		browser.findElement(By.xpath("//input[@type='password']")).sendKeys("Endlink@2020");
+		browser.findElement(By.xpath("//span[text()='Sign In']")).click();
+		return new HomePage(browser);
+	}
 }

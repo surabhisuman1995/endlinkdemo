@@ -335,5 +335,10 @@ public class Util {
 		 }
 		return -1;
 	}
+
+	public static void start(String string, String string2) {
+		// TODO Auto-generated method stub
+		
+	}
 	  
 }

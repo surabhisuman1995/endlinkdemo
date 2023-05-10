@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" parallel="none">
   <test name="Default test(failed)" parallel="none">
     <classes>
-      <class name="testsuite.RegressionTestCases">
+      <class name="testsuite.Demo">
         <methods>
+          <include name="TC_EL_001"/>
           <include name="before"/>
-          <include name="TC_EL_036"/>
         </methods>
-      </class> <!-- testsuite.RegressionTestCases -->
+      </class> <!-- testsuite.Demo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
