@@ -1,0 +1,42 @@
+ INFO | 2023-05-10 19:06:30,315 | Util.java | 199 | Test script execution started...
+ INFO | 2023-05-10 19:06:30,318 | Util.java | 199 | Log File creation done : LogFile.log
+ INFO | 2023-05-10 19:06:51,244 | Util.java | 199 | Test case data set in sheet : Val. User Search_01
+ INFO | 2023-05-10 19:06:51,245 | Util.java | 199 | Flag for the data set is : YES
+ INFO | 2023-05-10 19:07:06,281 | Util.java | 199 | The user is displayed within time limit
+ INFO | 2023-05-10 19:07:06,284 | Util.java | 195 | Report step generation success : The user is displayed within time limit
+ERROR | 2023-05-10 19:10:26,922 | Util.java | 207 | Uanble to click on Element, Exception is->no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.137)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Surabhi-Suman-G0131s-MacBook-Pro.local', ip: '192.168.1.2', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.137, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/wd/q_m0wgxj473...}, goog:chromeOptions: {debuggerAddress: localhost:56846}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ae6de7061baeeeeed21a86afbb6961db
+*** Element info: {Using=xpath, value=//span[contains(text(),'Click here!')]}
+ERROR | 2023-05-10 19:10:26,924 | Util.java | 207 | Report step generation success : Uanble to click on Element, Exception is->no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.137)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Surabhi-Suman-G0131s-MacBook-Pro.local', ip: '192.168.1.2', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.137, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/wd/q_m0wgxj473...}, goog:chromeOptions: {debuggerAddress: localhost:56846}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ae6de7061baeeeeed21a86afbb6961db
+*** Element info: {Using=xpath, value=//span[contains(text(),'Click here!')]}
+ERROR | 2023-05-10 19:10:26,927 | Util.java | 207 | Report step generation success : org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.137)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Surabhi-Suman-G0131s-MacBook-Pro.local', ip: '192.168.1.2', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.137, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/wd/q_m0wgxj473...}, goog:chromeOptions: {debuggerAddress: localhost:56846}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ae6de7061baeeeeed21a86afbb6961db
+ERROR | 2023-05-10 19:10:57,339 | Util.java | 207 | Unable to logout from the application
+ERROR | 2023-05-10 19:10:57,339 | Util.java | 207 | Report step generation success : Unable to logout from the application
+ERROR | 2023-05-10 19:10:57,341 | Util.java | 207 | Report step generation success : org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=112.0.5615.137)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Surabhi-Suman-G0131s-MacBook-Pro.local', ip: '192.168.1.2', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.137, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/wd/q_m0wgxj473...}, goog:chromeOptions: {debuggerAddress: localhost:56846}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ae6de7061baeeeeed21a86afbb6961db
