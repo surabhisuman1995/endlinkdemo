@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.GeckoDriverInfo;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.safari.SafariDriver;
 
 import utilities.Util;
@@ -50,6 +51,7 @@ public class EndLinkApplication {
 
 		}
 		if(browserName.equalsIgnoreCase("chrome")){
+			WebDriverManager.chromedriver().setup();
 			System.setProperty("webdriver.chrome.driver", 
 					"drivers/chromedriver");
 			ChromeOptions option = new ChromeOptions();

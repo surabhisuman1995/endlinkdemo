@@ -37,6 +37,7 @@ public class Demo {
 	@Test
 	public void TC_EL_001() {
 		Util.start("EndLink", "Val. User Search", "Validate User Search");
+		Allure.step("Test Starts");
 		
 		for (String testcase : Values.testcases) {
 			try {
@@ -63,5 +64,6 @@ public class Demo {
 		}
 		Values.extent.endTest(Values.parent);
 		Values.extent.flush();
+		Allure.step("Test Ends");
 	}
 }
