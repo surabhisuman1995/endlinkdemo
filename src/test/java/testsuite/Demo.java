@@ -51,6 +51,7 @@ public class Demo {
 				LoginPage LoginPage = EndLinkApplication.openEndLinkApplication();
 				HomePage homepage = LoginPage.login();
 				homepage.logout1();
+				Allure.step("Testing try block");
 				
 				
 				// ====================================
