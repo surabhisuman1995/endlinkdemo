@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
+import io.qameta.allure.Allure;
+
 import org.openqa.selenium.WebDriver;
 
 import pages.HomePage;
