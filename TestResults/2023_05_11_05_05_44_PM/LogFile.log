@@ -1,0 +1,5 @@
+ INFO | 2023-05-11 17:05:44,222 | Util.java | 199 | Test script execution started...
+ INFO | 2023-05-11 17:05:44,227 | Util.java | 199 | Log File creation done : LogFile.log
+ INFO | 2023-05-11 17:06:05,228 | Util.java | 199 | Test case data set in sheet : Val. User Search_01
+ INFO | 2023-05-11 17:06:05,228 | Util.java | 199 | Flag for the data set is : YES
+ERROR | 2023-05-11 17:06:16,596 | Util.java | 207 | Exception caughtnull
