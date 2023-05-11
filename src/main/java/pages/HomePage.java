@@ -1384,7 +1384,7 @@ public class HomePage extends Page {
 	
 	public LoginPage logout1() {
 		clickOn(btnLogOut);
-		clickOn(catLogout);
+		//clickOn(catLogout);
 		if (isElementPresent(By.xpath("//input[@type='email']"))) {
 			Util.Passed("Logged out successfully from the application");
 			Util.Screenshot();
